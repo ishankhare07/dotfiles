@@ -21,7 +21,7 @@ THE VIM LEARNING PATH                             *learnvim-path-overview*
 |learnvim-Moderate|
 |learnvim-Advanced|
 
-Extras~
+Extras 
 
 |learnvim-Plugins|
 |learnvim-External-Resources|
@@ -29,7 +29,7 @@ Extras~
 ##############################################################################
 BEGINNER TOPICS                                 *lv_B* *learnvim-Beginner*
 
-Competencies ~
+Competencies  
 
 On completing this section, you will:
 
@@ -101,12 +101,12 @@ you've installed pathogen, test that you've done it right by installing
 https://github.com/dahu/vim-help . Use the following to check for successul
 installation:
 
-After You Have Installed pathogen and vim-help:~
+After You Have Installed pathogen and vim-help: 
 
-1. run |:Helptags| -- it should execute silently. If you see an error like: >
+1. run |:Helptags| -- it should execute silently. If you see an error like:  
 
   E492: Not an editor command: Helptags
-<
+ 
   Then you have not successfully installed pathogen. Refer again to its
   installation instructions online.
 
@@ -161,16 +161,16 @@ To search the help system and return all matches, use the |:helpgrep| command.
 
 Recipe: Using helpgrep to broaden your search   *learnvim-recipe-helpgrep*
 ------------------------------------------------------------------------------
-Problem: ~
+Problem:  
 
 You want to search by hexadecimal value, for example the character represented
 by the value 0xAE (the ® symbol).  You've tried:
->
+ 
 	:help hexadecimal
 	:help hex
 	:help search
 	:help / and then searching within the help file for "hex"
-<
+ 
 If you had persisted in searching for subsequent matches in the last attempt,
 you would have eventually found a table of |/character-classes| in which the
 answer to your problem does indeed lie.  In itself, that is not a bad thing,
@@ -178,19 +178,19 @@ and it really didn't take too long to find the answer.  However, knowing that
 you should have jumped into the help system with :help /character-classes is
 by no means intuitive to the newcomer.
 
-Solution: ~
->
+Solution:  
+ 
 	:helpgrep hex
 	:cwindow
 	/search
 
-Produces: ~
->
+Produces:  
+ 
 	version7.txt|1018 col 48| |/\%x| \%x1a		search for character with 2 pos. hex number
 	version7.txt|1020 col 50| |/\%u| \%u12ab	search for character with 4 pos. hex number
 	version7.txt|1022 col 53| |/\%U| \%U1234abcd	search for character with 8 pos. hex number
-<
-Comments: ~
+ 
+Comments:  
 
 Admittedly, the information in the version_n_.txt files would probably not be
 your primary resource, but it gives a good answer in this case.  The point is,
@@ -218,33 +218,33 @@ channel and mailing list are all great sources of information in learning Vim.
 * Google - https://www.google.com/search?q=vim+topic
 * StackOverflow - http://stackoverflow.com/questions/tagged/vim
 
-IRC channel #vim on irc://irc.freenode.net~
+IRC channel #vim on irc://irc.freenode.net 
 
 The #vim freenode IRC channel has a fact bot called vimgor with answers to
 common problems.
->
+ 
   /msg vimgor filetype
-<
+ 
 will show the information behind the fact filetype.
 
 For searching, vimgor supports a listfacts command which returns all known
 facts containing the given term, e.g:
->
+ 
   /msg vimgor listfacts file
-<
+ 
 will list all known facts containing file.
 
 NOTE: You should explore vimgor using either /msg or /query to limit
       interference on the #vim channel.
 
-Pastebin~
+Pastebin 
 
 Use a pastebin for more than about 3 lines of data in an example on #vim.
 
 The format of your pastebin is important. Here is an excellent example:
 https://gist.github.com/2759774
 
-Describe:~
+Describe: 
 
 * What you want to achieve
 * Samples of your original data/text
@@ -258,15 +258,15 @@ Play nice: Patience & courtesy yields better results, faster.
 NOTE: Regularly throughout LearnVim, you will be quizzed to help reinforce your
       learning. You're welcome.
 
-QUIZ~
+QUIZ 
 
 1. Quick! What one thing would you really like to know more about in Vim right
    now? Make a note of it and we'll return to this later.
 
-2. What does the following command do? >
+2. What does the following command do?  
 
      FodFox
-<
+ 
      i. What methods will you use to find the answer?
     ii. What mistakes did you make when searching?
 
@@ -282,7 +282,7 @@ QUIZ~
 NOTE: Move your cursor to the QUIZ ANSWERS line below and press |zo| to see
      inside |folds|
 
-QUIZ ANSWERS {{{1~
+QUIZ ANSWERS {{{1 
 
 2. FodFox is not a command in Vim. Well, not a single command.
 
@@ -308,10 +308,10 @@ QUIZ ANSWERS {{{1~
 5. If you tried `:help :write!`, Vim told you "E149: Sorry, no help for
    :write!". Look up the bare form and read until you find mention of `!`.
 
-1. Did you note down earlier the answer to this question: >
+1. Did you note down earlier the answer to this question:  
 
    What one thing would you really like to know more about in Vim right now?
-<
+ 
    Using your newfound Vim help skills, try now to find out about that one
    thing you wrote down.
 
@@ -445,10 +445,10 @@ options.  As a quick overview:
 - :echo &option 	An alternate way to show the value of "option"
 
 E.g. To check the current value of 'shiftwidth' and then change it to 4:
->
+ 
 	:set shiftwidth?
 	:set shiftwidth=4
-<
+ 
 To search for options in Vim, always remember to use a single quote ( ' )
 character at the start of the option name to make sure your search doesn't
 clash with other entries in the help system. E.g.   :help 'exp   will find the
@@ -460,31 +460,31 @@ entry.  The use of help prefixes like ( ' ) is explained in |help-context|
 Use the |:options| command to show an interactive window of all Vim's settings
 including their current values and a brief description, grouped by function.
 
-Recipe: Using the Options Browser to search for and change a Vim setting ~
+Recipe: Using the Options Browser to search for and change a Vim setting  
 ------------------------------------------------------------------------------
-Problem: ~
+Problem:  
 
 You want to change the behaviour of something in Vim (like the tab & indent
 settings, or how the Toolbar is displayed in the GUI), but you don't know the
 option name and searching the help system doesn't appeal to you.
 
-Solution: ~
+Solution:  
 
 For tabs and indents:
->
- 	:options
-<
+ 
+ :options
+ 
 Scroll down the Table of Contents and press Enter on the '15 tabs and
 indenting' line.  This will jump you to the set of options controlling how Vim
 manages indentation.
 
 Likewise, for the GUI Toolbar problem:
->
+ 
  	:options
-<
+ 
 Scroll down or search for GUI (/GUI) and press Enter on the '10 GUI' line.
 
-Comments: ~
+Comments:  
 
 Changing a value on any of the 'set' lines and pressing Enter will update your
 current settings.  Add the 'set' line to your ~/.vimrc file (see
@@ -492,24 +492,24 @@ current settings.  Add the 'set' line to your ~/.vimrc file (see
 clean up the set line by removing the initial, unset version of the option
 before adding it to your ~/.vimrc file.
 
-Example: ~
+Example:  
 
 Say you're browsing the options and decide that you want to enable 'smarttab'.
 You see the line:
->
+ 
  	set nosta	sta
-<
+ 
 If you press Enter on that line then you will enable smarttabs.  Copying that
 line to your ~/.vimrc file will work, but it's unnecessary and unsightly to
 have the option turned off and then on like that.  So, when adding this to your
 ~/.vimrc, change the line like this:
->
+ 
  	set sta
-<
+ 
 Actually, it is a good practice to use the full name of an option so that when
 you come back to your ~/.vimrc file in six months' time you will be able to
 understand what the setting means.  So, change that line to:
->
+ 
  	set smarttab
 ------------------------------------------------------------------------------
 
@@ -519,7 +519,7 @@ MAKING SETTINGS PERMANENT          *lv_B_IV* *learnvim-permanent-settings*
 1. Your Own vimrc File                                    *learnvim-vimrc*
 
 Put this in your personal vimrc file (|learnvim-personal-vimrc-filename|):
->
+ 
 	set nocompatible               " NEVER change this! Use Vim mode, not vi mode.
 	filetype plugin indent on      " Enable automatic settings based on file type
 	syntax on                      " Enable colour syntax highlighting
@@ -611,7 +611,7 @@ Put this in your personal vimrc file (|learnvim-personal-vimrc-filename|):
 	    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 	  augroup END
 	endif
-<
+ 
 2. Additional Options to Investigate   *learnvim-vimrc-additional-options*
 
 Read about the following options and consider adding them to your $HOME/.vimrc
@@ -641,9 +641,9 @@ too:
 3. Your Own gvimrc File                                  *learnvim-gvimrc*
 
 Put this in your $HOME/.gvimrc :
->
+ 
 	set t_vb=                      " Disable screen flash on error
-<
+ 
 Note: Some options, like t_vb, need to be set in both $HOME/.vimrc and
 $HOME/.gvimrc because they are reset when the GUI is started.
 
@@ -678,7 +678,7 @@ alone absorb...  Well, I could say the journey of a thousand miles begins with
 the first step, or the secret to eating an elephant is to do so bite at a
 time, but I won't.  Instead, I offer this path through the motion morass:
 
-Operators & Text Objects ~
+Operators & Text Objects  
 
 One of Vim's most powerful features is its ability to perform an action over a
 specific portion of text.  In Vim speak, the action is called an |operator|
@@ -695,20 +695,20 @@ And start using them with this motion:
 |w|	(word) To operate from the current word under the cursor.  See
 	|word-motions| for the others in this category.
 
-EXERCISES:~
+EXERCISES: 
 
 Copy the following line to your practice file (|setting-up-a-practice-file|):
->
+ 
   Angels and ministers of grace defend us.
-<
-TARGET:~
->
+ 
+TARGET: 
+ 
   Angels and Vimmers of grace defend us.
-<
+ 
 Start with your cursor anywhere on that line in your practice buffer.
 Type the following commands:
 
-Commands:             Description: ~
+Commands:             Description:  
 
 1. 0                  - move to the first character on the line |0|
 2. 3w                 - move forward three words (to "ministers")
@@ -722,15 +722,15 @@ Commands:             Description: ~
   yanked (copied).
 * Experiment with counts, like 3dw or 2ywP.
 * Copy the original line again and try the following commands:
->
-  0fm3dw^Pdt Ep^~
-<
-  TARGET:~
->
+ 
+  0fm3dw^Pdt Ep^ 
+ 
+  TARGET: 
+ 
   Ministers of grace and Angels defend us.
-<
+ 
 The breakdown of this command into its constituent pieces is:
->
+ 
   0
   fm
   3dw
@@ -740,8 +740,8 @@ The breakdown of this command into its constituent pieces is:
   E
   p
   ^
-  ~
-<
+   
+ 
 Where the new commands are: |0| |f| |^| |P| |t| |E| |~|
 
 NOTE: A seasoned Vim Golfer ( http://www.vimgolf.com/ ) will be able to make
@@ -751,7 +751,7 @@ regular commands first. The instructions in
 an alternative to vimgolf. The rationale for that is given in
 http://of-vim-and-vigor.blogspot.com/2014/04/seconds-count-not-keystrokes.html
 
-QUIZ~
+QUIZ 
 
 1. What is an |operator|? What is a |motion|?
      i. What do operators do?
@@ -787,21 +787,21 @@ manually is boring, frustrating and prone to mistakes.
 
 * Use |,| to repeat the prior |f| |F| |t| |T| command in the opposite direction.
 
-EXERCISE: ~
+EXERCISE:  
 
 Copy the following line to your practice file (|setting-up-a-practice-file|):
->
+ 
   It's type, write, might, flight fun, fun, fun, fun, fun!
-<
-TARGET:~
->
+ 
+TARGET: 
+ 
   It's typey, writey, mighty, flighty fun, fun, fun, fun, fun!
-<
+ 
 
 Start with your cursor anywhere on that line in your practice buffer.
 Type the following commands:
 
-Commands:             Description: ~
+Commands:             Description:  
 
 1. ^         - move to the first non-whitespace character on the line |^|
 2. fe        - find the next 'e' character                            |f|
@@ -824,7 +824,7 @@ Commands:             Description: ~
 * Use @@ in normal mode to repeat the prior macro. See |learnvim-Macros| for an
   introduction to macros.
 
-QUIZ~
+QUIZ 
 
 1. How do you repeat the prior normal mode text change?
 
@@ -855,7 +855,7 @@ The two symbol marks, ' (quote) and ` (backquote) are very frequently used by
 accomplished vimmers.  Experiment with double-tapping these keys to see the
 difference in their behaviour.
 
-Law of the Instrument ~
+Law of the Instrument  
 
 "It is tempting, if the only tool you have is a hammer, to treat everything as
 if it were a nail."                                   -- Abraham Maslow (1966)
@@ -865,17 +865,17 @@ toys for every problem at hand.  Take for example the operation of deleting
 everything from the current cursor to a word you can see a few lines below in
 your document.  Having just learned about marks, it might seem like a good idea
 to do this:
->
+ 
     ma/foo<CR>d`a
-<
+ 
 But there's a much better way to do that:
->
+ 
     d/foo<CR>
-<
+ 
 You're going to jump to your practice file and try that out now, aren't you? ;)
 See |setting-up-a-practice-file| if you haven't done so already.
 
-Becoming an Expert Navigator~
+Becoming an Expert Navigator 
 
 What else is there to learn from |motion.txt|?
 
@@ -887,7 +887,7 @@ What else is there to learn from |motion.txt|?
 There are many other motions in |motion.txt| than mentioned here.  It really
 would pay to eventually work your way through that text.
 
-QUIZ~
+QUIZ 
 
 1.  What is a mark? Why are they useful?
 
@@ -915,16 +915,16 @@ TAGS                                                       *learnvim-tags*
 
 Read |tags-and-searches| for extra detail not covered here.
 
-Setting Up Your Tags Environment~
+Setting Up Your Tags Environment 
 
 You will need:
 
 1. A ctags generated tags file (Exuberant Ctags is the choice for most cases)
 
 Typically this is as easy as:
->
+ 
   ctags -R
-<
+ 
 
 in the root of your project.
 
@@ -938,9 +938,9 @@ you might want to include library tag files or a project-common tags file.
 3. A correctly set |'path'| option
 
 A good default is:
->
+ 
   set path=.,**
-<
+ 
 
 Which searches the directory of the current file and all directories beneath
 the current directory. See |file-searching| for more details.
@@ -951,7 +951,7 @@ specific plugins in "~/.vim/ftplugin/<the-filetype>.vim" or
 
 With the right setup, you will enjoy a happy tagging lifestyle.
 
-The Tag Power Commands~
+The Tag Power Commands 
 
 There are many tag commands available in Vim, but I'm going to share with you
 only a select few -- a mere dozen or so. These are the most frequently reached
@@ -992,7 +992,7 @@ refresher.
 		keyword under the cursor — a shortcut to ":g/<c-r><c-w>"
 
 TIP: This map (taken from the Vim help) lets you jump to one of the matches:
->
+ 
   :map <F4> [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
   <
 
@@ -1028,7 +1028,7 @@ vimmer knows that the extra bling doesn't add any real value to their edits.
 
 Vanilla, when done right, is a classy choice.
 
-QUIZ~
+QUIZ 
 
 1. What is a tag? Why are they useful?
 
@@ -1055,7 +1055,7 @@ BUFFERS AND ARGS                                   *learnvim-buffers-args*
 
 Read |windows-intro| for an overview of buffers, windows and tab-pages in Vim.
 
-The Buffer List~
+The Buffer List 
 
 Use the |:ls| command to show the list of buffers (files) that you're currently
 editing.
@@ -1076,7 +1076,7 @@ But there are two problems with the buffer list:
 1. It isn't able to be reordered,
 2. It isn't able to be renumbered.
 
-Ordering~
+Ordering 
 
 We sometimes wish we could re-order the buffers so that we can group related
 ones together: all text files together and all source files before them, say.
@@ -1085,7 +1085,7 @@ changed throughout the lifetime of the Vim session - it'd be much nicer to be
 able to re-order these as and when we see fit. We can't do this with the buffer
 list.
 
-Numbering~
+Numbering 
 
 When buffers are removed from the buffer list, they leave holes in the
 numbering of listed buffers. Many plugins use temporary buffers (some a LOT)
@@ -1098,75 +1098,75 @@ can't do this with the buffer list.
 While the buffer list is and always will be useful, to solve these two
 problems, we have the Argument List.
 
-Argument List~
+Argument List 
 
 Read |arglist| for details not covered here.
 
 Each window can have a separate argument list. You're free to set and reset the
 argument list as and when you see fit.
 
-Useful Arglist Commands~
+Useful Arglist Commands 
 
 To set the current window's argument list to the .c files in the src/
 directory:
->
+ 
   :args src/*.c
-<
+ 
 
 To do that recursively within all of the subdirectories:
->
+ 
   :args src/**/*.c
-<
+ 
 
 To see your current argument list:
->
+ 
   :args
-<
+ 
 
 To add the .h files to the argument list:
->
+ 
   :argadd src/**/*.h
-<
+ 
 
 To jump to an argument by partial buffer (file) name match:
->
+ 
   :argedit {partial name}
-<
+ 
 
 To jump to an argument by (1-based) index:
->
+ 
   :argument {index}
-<
+ 
 
 To perform an operation on all of your arguments in a single command:
->
+ 
   :argdo %s/Long live \zsthe buffer list\ze!/argument lists/ge | update
-<
+ 
 
 If you |:quit| before visiting all of the files in your argument list, Vim will
 ask you to confirm. To prevent that, use |:qa| instead.
 
-Local vs Global~
+Local vs Global 
 
 If you open a new window, it will inherit the parent window's argument list.
 There are functions which will attach to the global argument list or create a
 new local argument list for the current window.
 See |:argglobal| and |:arglocal|
 
-Plugin Support via VFM~
+Plugin Support via VFM 
 
 These commands are useful but a little frustrating to use in their native form.
 The VimFindsMe (|learnvim-vim-finds-me|) plugin has support for the argument
 list, removing these frustrations.
 
-Other Buffer Commands~
+Other Buffer Commands 
 
 The list of commands from |:badd| onwards in the |windows.txt| help file show
 the other buffer commands. Another excellent normal-mode command for navigating
 buffers is |ctrl-6| to switch between the |current-file| and the
 |alternate-file|.
 
-QUIZ~
+QUIZ 
 
 1. What is a buffer? What is the buffer list?
 
@@ -1222,18 +1222,18 @@ Quickfix window
 
 Recipe: Setting Up A Practice File   *learnvim-setting-up-a-practice-file*
 ------------------------------------------------------------------------------
-New!:~
+New!: 
 You can use the instructions below to set up a practice file, OR you can
 install https://github.com/dahu/VimGym , a plugin designed for this exact
 purpose.
 
 The Manual Way:
 
-Problem: ~
+Problem:  
 There's just too much to learn with Vim, and every time you learn a new thing,
 it seems that the last cool tip you learned slips from memory.
 
-Solution: ~
+Solution:  
 Have a practice file.  It's a good idea to have a file you can jump to whenever
 you want to test a newly learned Vim feature or continue to practice
 previously learned material so that it doesn't fade away.  Here's a short
@@ -1242,17 +1242,17 @@ recipe on how to do that:
 1. Choose a location, say: ~/.vim/practice.txt (Create the directory if it
    doesn't exist - you'll be using it in a later tip.)
 2. Edit that file in Vim and type the following command:
->
+ 
    mP
-<
+ 
 That sets the global P mark (|learnvim-marks|) on line one of your practice
 file.  The great thing about global marks ([A-Z]) is that not only do they
 remember the line on which they were set (like local marks [a-z]), but they
 also remember the file in which they were set.  So, now at any time when you're
 in Vim and you'd like to jump to your practice file, just type:
->
+ 
    'P
-<
+ 
 You can use |ctrl-o| to jump back to where you came from when you've finished
 practising.
 
@@ -1303,7 +1303,7 @@ to repeat a series of commands across multiple chunks of text all
 automatically so you don't have to hit   @a   or even   @@   repeatedly to
 execute the macro in all the places you need it to run.
 
-Stop Condition~
+Stop Condition 
 
 If you don't provide an action within the body of your macro that causes an
 error, the macro will run from the point of execution until the end of the
@@ -1312,7 +1312,7 @@ specific, you'll have to ensure it errors at that point.  Using the    FfTt
 commands are a common way to force a failed search.  If you use a pattern
 search with the   /   command, you may need to use anchors to cause failures.
 
-Clearing the Register Beforehand~
+Clearing the Register Beforehand 
 
 Because a recursive macro executes itself with the command   @a   (assuming
 the macro is being recorded in register a), then at the point in time that the
@@ -1323,7 +1323,7 @@ way to empty register a.  By recording nothing into   a   , we effectively
 empty it.  The subsequent   qa   in the command string   qaqqa   begins the
 real recording.
 
-Start in the Right Place~
+Start in the Right Place 
 
 To allow the recursive invocation of your macro to be actually useful, you have
 to arrange for it to start in the right place.  This could be on the next line,
@@ -1334,7 +1334,7 @@ recording with   q   hence   j0@aq
 
 You're done recording.  Use   @a   to run it.
 
-QUIZ~
+QUIZ 
 
 1.  What is a macro?
 
@@ -1392,12 +1392,12 @@ Perldo and Rubydo (taken from http://stackoverflow.com/questions/726894/what-are
 ##############################################################################
 ADVANCED TOPICS                                 *lv_A* *learnvim-Advanced*
 
-|lv_A_I|	Becomming a VimL Master~
+|lv_A_I|	Becomming a VimL Master 
 
 ------------------------------------------------------------------------------
                                            *lv_A_I* *learnvim-viml-master*
 
-Becomming a VimL Master~
+Becomming a VimL Master 
 
 Everybody wants to be a grey-beard master vimmer, mind-wielding Vim like a
 jedi, jumping around buffers like vimjas and scripting changes like bitchin
@@ -1406,7 +1406,7 @@ envy of your peers, idol to your fans.
 
 Skill Progression: Trainee -> Novice -> Worker -> Professional -> Expert
 
-Trainee~
+Trainee 
 
 * Read the following parts of |cmdline.txt|
 ** |cmdline-lines|
@@ -1450,7 +1450,7 @@ Trainee~
 
 * Read http://learnvimscriptthehardway.stevelosh.com/
 
-Novice~
+Novice 
 
 * Contribute bug fixes and small enhancements to existing plugins.
 
@@ -1470,7 +1470,7 @@ Novice~
 
 * In regard to |:normal|, read |motion.txt|
 
-Worker~
+Worker 
 
 * Read |eval.txt|
 
@@ -1481,7 +1481,7 @@ Worker~
 
 * Assist Novices
 
-Professional~
+Professional 
 
 * Actively support five or more peer-reviewed, fully |usr_41| compliant plugins
 
@@ -1493,7 +1493,7 @@ Professional~
 
 * Participate in discussions about best practice for VimL development
 
-Expert~
+Expert 
 
 * Create new tools and libraries for VimL development
 
@@ -1541,16 +1541,16 @@ Matchit                                                 *learnvim-matchit*
 
 The Matchit plugin provides extended |%| matching in Vim.
 
-DOWNLOAD~
+DOWNLOAD 
 
 Matchit comes bundled with Vim, so there is nothing to download.  All you need
 to do is enable it as described below.
 
-INSTALL~
+INSTALL 
 Put the following line in your ~/.vimrc file:
->
+ 
   runtime macros/matchit.vim
-<
+ 
 
 
 Pathogen                                               *learnvim-pathogen*
@@ -1559,16 +1559,16 @@ Created by the venerable, tpope, this plugin is a light-weight plugin manager
 for Vim.  It allows you to install, test, upgrade and uninstall plugins much
 more easily than the default Vim approach.
 
-DOWNLOAD ~
->
+DOWNLOAD  
+ 
   http://www.vim.org/scripts/script.php?script_id=2332
-<
+ 
 Or get it from github at:
->
+ 
   https://github.com/tpope/vim-pathogen
-<
+ 
 
-INSTALL ~
+INSTALL  
 
 Install instructions are available from the same places above for downloading
 this plugin.
@@ -1580,16 +1580,16 @@ Surround is another tpope creation used for adding, changing or deleting the
 text surrounding a text-object.  Typical surround text includes quotes,
 brackets and tags.
 
-DOWNLOAD ~
->
+DOWNLOAD  
+ 
   http://www.vim.org/scripts/script.php?script_id=1697
-<
+ 
 Or get it from github at:
->
+ 
   https://github.com/tpope/vim-surround
-<
+ 
 
-INSTALL ~
+INSTALL  
 
 Install instructions are available from the same places above for downloading
 this plugin.
@@ -1609,15 +1609,15 @@ find result on your |'path'| option. If you press |<enter>| on a file from this
 window, it will be opened as a new buffer (but not added to your argument
 list). If you'd like to set your argument list to the files in the VFM scratch
 window, type:
->
+ 
   :VFMArgs
-<
+ 
 
 If instead you'd like to add all of the files to your argument list, type
 within the VFM scratch window:
->
+ 
   :VFMArgadd
-<
+ 
 
 The cumbersome combination of |:argument| and |:argedit| have been combined
 into one convenient function called VFMArgument(arg) where arg can be either an
@@ -1625,7 +1625,7 @@ argument index or partial buffer name. Remember that the argument index is not
 the buffer number. You can see the list of arguments with either the |:VFMArgs|
 command or the builtin |:args| command. The buffer name given must exist in the
 current argument list. This function has a corresponding command:
->
+ 
   :VFMArgument {arg} <
 
 Which is triggered by <plug>vfm_argument (mapped to <leader>gg by default). The
@@ -1647,14 +1647,14 @@ command supports argument list buffer name completion.
 ##############################################################################
 EXTERNAL RESOURCES                           *learnvim-External-Resources*
 
-Community ~
+Community  
 
 * Mailing Lists - http://www.vim.org/community.php
 * IRC channel #vim on irc://irc.freenode.net
 
-Tutorials ~
+Tutorials  
 
-  Beginner ~
+  Beginner  
 
   * http://vim.wikia.com/wiki/Learn_to_use_help
   * http://openvim.com/tutorial.html
@@ -1664,22 +1664,22 @@ Tutorials ~
   * https://github.com/dahu/VimRegexTutor
   * http://vimhelp.appspot.com/vim_faq.txt.html
 
-  Intermediate ~
+  Intermediate  
 
   * https://github.com/dahu/vim_waz_ere
   * http://derekwyatt.org/vim/tutorials/intermediate/
   * http://www.moolenaar.net/habits.html
 
-  Advanced ~
+  Advanced  
 
   * http://derekwyatt.org/vim/tutorials/advanced/
 
-Plugins ~
+Plugins  
 
 * www.vim.org/search.php
 * https://github.com/vim-scripts
 
-Unsorted ~
+Unsorted  
 
 * http://vim.wikia.com/wiki/Vim_Tips_Wiki
 * http://vim.wikia.com/wiki/Example_vimrc
