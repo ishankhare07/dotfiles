@@ -4,6 +4,12 @@ filetype off                  " required
 syntax on
 set number
 
+" set tab width to 4
+set shiftwidth=4
+
+" always use spaces instead of tabs
+set expandtab
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
