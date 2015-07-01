@@ -4,6 +4,9 @@ filetype off                  " required
 syntax on
 set number
 
+" set colorscheme as hybrid_material
+" colorscheme hybrid_material
+
 " set tab width to 4
 set shiftwidth=4
 
@@ -18,6 +21,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'kristijanhusak/vim-hybrid-material'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
