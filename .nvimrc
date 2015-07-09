@@ -4,11 +4,14 @@ filetype off                  " required
 syntax on
 set number
 
-" set colorscheme as hybrid_material
-" colorscheme hybrid_material
-
 " set tab width to 4
 set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set smarttab
+
+" allow shortcut for split resizing
+nnoremap <c-w>> :vertical resize +10<cr>
 
 " always use spaces instead of tabs
 set expandtab
@@ -22,6 +25,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'MPiccinato/wombat256'
+Plugin 'lyxell/pride.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -44,3 +49,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" set colorscheme
+colorscheme pride
+
