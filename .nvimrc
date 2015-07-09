@@ -10,6 +10,9 @@ set tabstop=4
 set softtabstop=4
 set smarttab
 
+" allow shortcut for split resizing
+nnoremap <c-w>> :vertical resize +10<cr>
+
 " always use spaces instead of tabs
 set expandtab
 
@@ -23,6 +26,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'MPiccinato/wombat256'
+Plugin 'lyxell/pride.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -47,6 +51,5 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " set colorscheme
-colorscheme wombat256
-
+colorscheme pride
 
