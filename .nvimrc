@@ -4,14 +4,17 @@ filetype off                  " required
 syntax on
 set number
 
-" set colorscheme as hybrid_material
-" colorscheme hybrid_material
-
 " set tab width to 4
 set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set smarttab
 
 " always use spaces instead of tabs
 set expandtab
+
+" set colorscheme
+" colorscheme hybrid_material
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
