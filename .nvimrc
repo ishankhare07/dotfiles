@@ -13,9 +13,6 @@ set smarttab
 " always use spaces instead of tabs
 set expandtab
 
-" set colorscheme
-" colorscheme hybrid_material
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -25,6 +22,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'MPiccinato/wombat256'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -47,3 +45,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" set colorscheme
+colorscheme wombat256
+
+
