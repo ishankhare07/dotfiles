@@ -1,0 +1,25 @@
+[2015-06-15 13:11:28] __rvm_set_executable
+__rvm_set_executable () 
+{ 
+    for __file in "$@";
+    do
+        [[ -x "${__file}" ]] || chmod +x "${__file}";
+    done
+}
+current path: /Users/ishan/.rvm/src/ruby-2.2.2
+PATH=/usr/local/opt/pkg-config/bin:/usr/local/opt/libtool/bin:/usr/local/opt/automake/bin:/usr/local/opt/autoconf/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/ishan/.rvm/bin
+command(8): __rvm_set_executable /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/erb /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/gem /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/irb /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/rake /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/rdoc /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/ri /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/ruby
+++ for __file in '"$@"'
+++ [[ -x /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/erb ]]
+++ for __file in '"$@"'
+++ [[ -x /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/gem ]]
+++ for __file in '"$@"'
+++ [[ -x /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/irb ]]
+++ for __file in '"$@"'
+++ [[ -x /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/rake ]]
+++ for __file in '"$@"'
+++ [[ -x /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/rdoc ]]
+++ for __file in '"$@"'
+++ [[ -x /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/ri ]]
+++ for __file in '"$@"'
+++ [[ -x /Users/ishan/.rvm/rubies/ruby-2.2.2/bin/ruby ]]

@@ -1,0 +1,97 @@
+[2015-06-15 13:11:10] __rvm_make
+__rvm_make () 
+{ 
+    \make "$@" || return $?
+}
+current path: /Users/ishan/.rvm/src/ruby-2.2.2
+PATH=/usr/local/opt/pkg-config/bin:/usr/local/opt/libtool/bin:/usr/local/opt/automake/bin:/usr/local/opt/autoconf/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/ishan/.rvm/bin
+command(2): __rvm_make install
+++ make install
+config.status: creating x86_64-darwin14-fake.rb
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -dynamiclib
+	CFLAGS = -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wdeprecated-declarations -Wextra-tokens   -fno-common -pipe 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fstack-protector -fno-strict-overflow -fvisibility=hidden -DRUBY_EXPORT
+	CPPFLAGS = -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I. -I.ext/include/x86_64-darwin14 -I./include -I.
+	DLDFLAGS = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib  -install_name /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/libruby.2.2.0.dylib -current_version 2.2.0 -compatibility_version 2.2.0  -fstack-protector -Wl,-u,_objc_msgSend -framework CoreFoundation  -fstack-protector -Wl,-u,_objc_msgSend -framework CoreFoundation  
+	SOLIBS = -lpthread -ldl -lobjc 
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 6.1.0 (clang-602.0.53) (based on LLVM 3.6.0svn)
+Target: x86_64-apple-darwin14.0.0
+Thread model: posix
+making enc
+make[1]: Nothing to be done for `enc'.
+making srcs under enc
+make[1]: Nothing to be done for `srcs'.
+generating transdb.h
+transdb.h unchanged
+making trans
+make[1]: Nothing to be done for `./enc/trans'.
+making encs
+generating makefile exts.mk
+Failed to configure -test-/win32/console. It will not be installed.
+Failed to configure -test-/win32/dln. It will not be installed.
+Failed to configure -test-/win32/dln/empty. It will not be installed.
+Failed to configure -test-/win32/fd_setsize. It will not be installed.
+Failed to configure gdbm. It will not be installed.
+configuring socket
+Failed to configure win32. It will not be installed.
+Failed to configure win32ole. It will not be installed.
+make[2]: Nothing to be done for `all'.
+make[2]: Nothing to be done for `all'.
+make[2]: Nothing to be done for `all'.
+make[2]: Nothing to be done for `all'.
+installing default bigdecimal libraries
+installing default date_core libraries
+installing digest libraries
+installing default digest libraries
+installing default sha2 libraries
+installing default fiddle libraries
+make[2]: Nothing to be done for `all'.
+installing default console libraries
+installing default libraries
+installing default nkf libraries
+installing default openssl libraries
+installing default pathname libraries
+installing default psych libraries
+installing default pty libraries
+linking shared-object ripper.bundle
+installing default ripper libraries
+checking ../.././parse.y and ../.././ext/ripper/eventids2.c
+linking shared-object socket.bundle
+installing default socket libraries
+installing default syslog libraries
+installing tcltklib libraries
+installing default tcltklib libraries
+make[2]: Nothing to be done for `all'.
+make[2]: Nothing to be done for `all'.
+make[2]: `ruby' is up to date.
+./miniruby -I./lib -I. -I.ext/common  ./tool/runruby.rb --extout=.ext  -- --disable-gems -r./x86_64-darwin14-fake ./tool/rbinstall.rb --make="/Applications/Xcode.app/Contents/Developer/usr/bin/make" --dest-dir="" --extout=".ext" --mflags="" --make-flags="" --data-mode=0644 --prog-mode=0755 --installed-list .installed.list --mantype="doc"
+installing binary commands:   /Users/ishan/.rvm/rubies/ruby-2.2.2/bin
+installing base libraries:    /Users/ishan/.rvm/rubies/ruby-2.2.2/lib
+installing arch files:        /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/x86_64-darwin14
+installing pkgconfig data:    /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/pkgconfig
+installing command scripts:   /Users/ishan/.rvm/rubies/ruby-2.2.2/bin
+installing library scripts:   /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0
+installing common headers:    /Users/ishan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0
+installing manpages:          /Users/ishan/.rvm/rubies/ruby-2.2.2/share/man/man1
+installing extension objects: /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/x86_64-darwin14
+installing extension objects: /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/x86_64-darwin14
+installing extension objects: /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14
+installing extension headers: /Users/ishan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/x86_64-darwin14
+installing extension scripts: /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0
+installing extension scripts: /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0
+installing extension scripts: /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/vendor_ruby/2.2.0
+installing extension headers: /Users/ishan/.rvm/rubies/ruby-2.2.2/include/ruby-2.2.0/ruby
+installing default gems:      /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0 (build_info, cache, doc, extensions, gems, specifications)
+                              bigdecimal 1.2.6
+                              io-console 0.4.3
+                              json 1.8.1
+                              psych 2.0.8
+                              rake 10.4.2
+                              rdoc 4.2.0
+installing bundle gems:       /Users/ishan/.rvm/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0 (build_info, cache, doc, extensions, gems, specifications)
+                              minitest-5.4.3.gem
+                              power_assert-0.2.2.gem
+                              test-unit-3.0.8.gem

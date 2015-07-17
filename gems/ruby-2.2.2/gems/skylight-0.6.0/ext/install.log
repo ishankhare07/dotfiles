@@ -1,0 +1,4 @@
+I, [2015-06-18T13:30:41.361849 #22771]  INFO -- : SKYLIGHT_HDR_PATH=/Users/ishan/.rvm/gems/ruby-2.2.2/gems/skylight-0.6.0/ext; SKYLIGHT_LIB_PATH=/Users/ishan/.rvm/gems/ruby-2.2.2/gems/skylight-0.6.0/lib/skylight/native/x86_64-darwin
+I, [2015-06-18T13:30:41.362313 #22771]  INFO -- : [SKYLIGHT] fetching native ext; curr-platform=x86_64-darwin; requested-arch=x86_64-darwin; version=0.5.0-fbaa3ed
+I, [2015-06-18T13:30:41.362446 #22771]  INFO -- : [SKYLIGHT] attempting to fetch from remote; uri=https://s3.amazonaws.com/skylight-agent-packages/skylight-native/0.5.0-fbaa3ed/skylight_x86_64-darwin.tar.gz
+I, [2015-06-18T13:32:39.567593 #22771]  INFO -- : [SKYLIGHT] successfully downloaded native ext; out=/Users/ishan/.rvm/gems/ruby-2.2.2/gems/skylight-0.6.0/ext/skylight_x86_64-darwin.tar.gz

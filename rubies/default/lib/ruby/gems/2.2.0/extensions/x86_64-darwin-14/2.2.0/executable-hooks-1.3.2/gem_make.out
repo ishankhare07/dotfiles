@@ -1,0 +1,12 @@
+/Users/ishan/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150615-22849-t2yact.rb extconf.rb
+rake 10.4.2
+rdoc 4.2.0
+
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+make: Nothing to be done for `install'.
