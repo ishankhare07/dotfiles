@@ -27,6 +27,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'MPiccinato/wombat256'
 Plugin 'lyxell/pride.vim'
+Plugin 'rust-lang/rust.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -51,5 +52,5 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " set colorscheme
-colorscheme pride
+" colorscheme pride
 
