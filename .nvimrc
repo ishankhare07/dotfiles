@@ -16,6 +16,10 @@ nnoremap <c-w>> :vertical resize +10<cr>
 " always use spaces instead of tabs
 set expandtab
 
+" set colors to 256
+" set t_Co=256
+" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -28,6 +32,7 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'MPiccinato/wombat256'
 Plugin 'lyxell/pride.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'freeo/vim-kalisi'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -52,5 +57,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " set colorscheme
-" colorscheme pride
+colorscheme pride
 
+""if ( $TERM == "xterm-256color" )
+""  set term=screen-256color
+""end
