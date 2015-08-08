@@ -91,3 +91,8 @@ source $ZSH/oh-my-zsh.sh
 # enable suggestion for package if command not found
 # not required as command-not-found is now in plugins
 # . /etc/zsh_command_not_found
+
+# git specific custom aliases
+alias glrh="git ls-remote --heads"
+alias gctb="git checkout --track -b"    # followed by <local_branch_name> <origin/remote_branch_name>
+alias gpsup="git push --set-upstream"     # useful for first time push of new branches
