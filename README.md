@@ -1,5 +1,4 @@
 # dotfiles
-dotfiles for vim and neovim configuration
 
 1. git specific  
   *Following are some custom `git` specific aliases that I have added  
