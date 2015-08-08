@@ -21,7 +21,7 @@ DEFAULT_USER="ishan"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=1
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -30,7 +30,7 @@ DEFAULT_USER="ishan"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -52,7 +52,8 @@ DEFAULT_USER="ishan"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# tmux help at https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#tmux
+plugins=(git ruby python autojump autopep8 command-not-found pip pyvenv sudo)
 
 # User configuration
 
@@ -60,6 +61,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+#source $ZSH/templates/zshrc.zsh-template
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -87,4 +89,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # enable suggestion for package if command not found
-. /etc/zsh_command_not_found
+# not required as command-not-found is now in plugins
+# . /etc/zsh_command_not_found

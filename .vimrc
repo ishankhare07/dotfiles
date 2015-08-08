@@ -20,8 +20,6 @@ set expandtab
 " set t_Co=256
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -39,6 +37,8 @@ Plugin 'lyxell/pride.vim'
 Plugin 'MPiccinato/wombat256'
 Plugin 'rust-lang/rust.vim'
 Plugin 'freeo/vim-kalisi'
+Plugin 'mhumeSF/one-dark.vim'
+Plugin 'Valloric/YouCompleteMe'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -61,4 +61,4 @@ filetype plugin indent on    " required
 " first set 256 color support
 set t_Co=256
 " then enable colorscheme
-colorscheme wombat256
+" colorscheme pride 
