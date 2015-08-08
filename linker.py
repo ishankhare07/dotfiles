@@ -18,6 +18,7 @@ class Linker:
     def create_symlink(self, enitity):
         try:
             os.symlink(self.home + "/.dotfiles/" + enitity, self.home + "/" + enitity)
+            print("created symlink", enitity)
         except FileExistsError as fileExists:
             print("Symlink exists", enitity)       # symlink already exists
 
