@@ -1,6 +1,5 @@
 import os
 
-
 class Linker:
     def __init__(self):
         self.dirs = os.listdir()
