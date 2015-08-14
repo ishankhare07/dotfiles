@@ -4,6 +4,9 @@ filetype off                  " required
 syntax on
 set number
 
+" set options for youcompleteme whitlist files
+let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1}
+
 " set tab width to 4
 set shiftwidth=4
 set tabstop=4
@@ -61,4 +64,4 @@ filetype plugin indent on    " required
 " first set 256 color support
 set t_Co=256
 " then enable colorscheme
-" colorscheme pride 
+colorscheme onedark
