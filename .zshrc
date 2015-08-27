@@ -97,3 +97,4 @@ alias glrh="git ls-remote --heads"
 alias gctb="git checkout --track -b"      # followed by <local_branch_name> <origin/remote_branch_name>
 alias gpsup="git push --set-upstream"      # useful for first time push of new branches
 alias gbvv="git branch -vv" 
+[[ -s "/home/ishan/.gvm/scripts/gvm" ]] && source "/home/ishan/.gvm/scripts/gvm"
