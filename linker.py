@@ -10,7 +10,7 @@ class Linker:
 
         for args in sys.argv:
             if args[0] == "-":                                 # options provided
-                for option in args:
+                for option in args[1:]:
                     if option == "f":
                         self.force = True
                     elif option == "t":
@@ -29,7 +29,7 @@ class Linker:
 
     def create_symlink(self, enitity):
         try:
-            os.symlink(self.home + "/.dotfiles/" + enitity, self.home + "/" + enitity)
+            os.symlink(self.home + "/dotfiles/" + enitity, self.home + "/" + enitity)
             print("created symlink", enitity)
         except FileExistsError as fileExists:
             if self.force:
@@ -43,9 +43,13 @@ class Linker:
         if not os.path.exists(themes_dir):
             os.mkdir(themes_dir)
         try:
-            os.symlink(self.home + "/.dotfiles/ishankhare07.zsh-theme", themes_dir + "/robbyrussell.zsh-theme")
+            os.symlink(self.home + "/dotfiles/ishankhare07.zsh-theme", themes_dir + "/robbyrussell.zsh-theme")
             print("Successfully linked theme file")
         except FileExistsError as fileExists:
+            if self.force:
+                os.remove(themes_dir + "/robbyrussell.zsh-theme")   # remove existing symlink
+                self.link_theme()                                   # retry symlinking
+                return
             print("Theme already linked")
 
 if __name__ == "__main__":
