@@ -21,4 +21,8 @@ apart from the ones provided by [oh-my-zsh git plugin](https://github.com/robbyr
   alias gbvv="git branch -vv" 
   ```  
 2. Python symlink linker  
-  The file [linker.py](https://github.com/ishankhare07/dotfiles/blob/master/linker.py) is an automated script that generates symbolic links to this `dotfiles` folder, assuming that it is located in your `home directory`. It skips already existing symlinks(prints a message as well) and creates those which do not(another message for this). It symlinks you files and folders both, i.e. we will have links for `dotfiles/.vim` as well as `dotfiles/.vimrc`. Anyone can use this file as it configures your `~` directory automatically, so you don't need to worry about your username conflicts, although the script assumes that dotfiles are in a folder named `.dotfiles` inside you `~` directory, i.e. `~/.dotfiles` and NOT `~/dotfiles`. I may add a commandline parameter to provide your custom folder name in the future.
+  The file [linker.py](https://github.com/ishankhare07/dotfiles/blob/master/linker.py) is an automated script that generates symbolic links to this `dotfiles` folder, assuming that it is located in your `home directory`.  
+By defualt it skips already existing symlinks(prints a message as well) and creates those which do not(another message for this). This behavior can be changed by providing a `-f` command line option.  
+It symlinks your files and folders both, i.e. we will have links for `dotfiles/.vim` as well as `dotfiles/.vimrc`.  
+Anyone can use this file as it configures your `~` directory automatically, so you don't need to worry about your username conflicts.  
+The script also provides an option to symlink your custom theme-file using the `-t` option.
