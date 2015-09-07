@@ -17,6 +17,7 @@ class Linker:
                         self.theme = True
                     else:
                         print("Usage: python3 linker.py [-ft]")
+                        exit()
 
     def link(self):
         for enitity in self.dirs:
