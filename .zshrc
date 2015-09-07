@@ -90,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # enable suggestion for package if command not found
 # not required as command-not-found is now in plugins
-# . /etc/zsh_command_not_found
+ . /etc/zsh_command_not_found
 
 # git specific custom aliases
 alias glrh="git ls-remote --heads"
@@ -98,3 +98,15 @@ alias gctb="git checkout --track -b"      # followed by <local_branch_name> <ori
 alias gpsup="git push --set-upstream"      # useful for first time push of new branches
 alias gbvv="git branch -vv" 
 [[ -s "/home/ishan/.gvm/scripts/gvm" ]] && source "/home/ishan/.gvm/scripts/gvm"
+
+# alias for tumx unicode support
+alias tmux="tmux -u"
+
+# set 256 color support for tmux
+if [ "$TMUX" = "" ]; then
+    export TERM=screen-256color
+    echo "starting tmux"
+    tmux
+    exit
+
+fi

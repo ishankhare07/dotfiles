@@ -19,10 +19,6 @@ nnoremap <c-w>> :vertical resize +10<cr>
 " always use spaces instead of tabs
 set expandtab
 
-" set colors to 256
-" set t_Co=256
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
