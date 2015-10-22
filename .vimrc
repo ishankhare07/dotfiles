@@ -1,11 +1,17 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" set syntax highlighting on
 syntax on
+
+" set line number on
 set number
 
 " set options for youcompleteme whitlist files
 let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1}
+
+" auto-close ycm preview window after completion
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " set tab width to 4
 set shiftwidth=4
@@ -15,6 +21,12 @@ set smarttab
 
 " allow shortcut for split resizing
 nnoremap <c-w>> :vertical resize +10<cr>
+
+" set vim-airline to always appear
+set laststatus=2
+
+" intergate vim-airline with powerline fonts
+let g:airline_powerline_fonts = 1
 
 " always use spaces instead of tabs
 set expandtab
@@ -37,6 +49,9 @@ Plugin 'MPiccinato/wombat256'
 Plugin 'rust-lang/rust.vim'
 Plugin 'freeo/vim-kalisi'
 Plugin 'mhumeSF/one-dark.vim'
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/promptline.vim'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'Valloric/YouCompleteMe'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -46,7 +61,7 @@ Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -61,3 +76,12 @@ filetype plugin indent on    " required
 set t_Co=256
 " then enable colorscheme
 colorscheme onedark
+
+" detect ctrl arrow keys inside tmux
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif

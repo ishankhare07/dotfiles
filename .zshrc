@@ -7,6 +7,9 @@ export ZSH=~/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
+# disable JAVA_TOOL_OPTIONS
+unset JAVA_TOOL_OPTIONS
+
 # set default user
 DEFAULT_USER="ishan"
 
@@ -90,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # enable suggestion for package if command not found
 # not required as command-not-found is now in plugins
- . /etc/zsh_command_not_found
+. /etc/zsh_command_not_found
 
 # git specific custom aliases
 alias glrh="git ls-remote --heads"
@@ -100,7 +103,7 @@ alias gbvv="git branch -vv"
 [[ -s "/home/ishan/.gvm/scripts/gvm" ]] && source "/home/ishan/.gvm/scripts/gvm"
 
 # alias for tumx unicode support
-alias tmux="tmux -u"
+alias tmux="tmux -u2"
 
 # set 256 color support for tmux
 if [ "$TMUX" = "" ]; then
@@ -110,3 +113,18 @@ if [ "$TMUX" = "" ]; then
     exit
 
 fi
+
+# alias for starting android studio
+alias androidstudio="/home/ishan/android-studio/bin/studio.sh & disown"
+
+# add search highlighting for less & man pages
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;016m\E[48;5;220m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
+# depot_tools for chromium os
+export PATH=`pwd`/depot_tools:"$PATH"
