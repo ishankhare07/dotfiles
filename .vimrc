@@ -74,15 +74,17 @@ filetype plugin indent on    " required
 
 " first set 256 color support
 set t_Co=256
-" set dark background for solarized theme
-set background=dark
-" then enable colorscheme
-colorscheme onedark
-" If you don't want airline colors in tmuxline
-let g:airline#extensions#tmuxline#enabled = 0
 
 " setting default theme for airline
 let g:airlinetheme='hybrid'
+
+" enable colorscheme
+colorscheme onedark
+" set dark background
+set background=dark
+
+" If you don't want airline colors in tmuxline
+let g:airline#extensions#tmuxline#enabled = 0
 
 " detect ctrl arrow keys inside tmux
 if &term =~ '^screen'
