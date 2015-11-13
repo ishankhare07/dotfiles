@@ -77,7 +77,9 @@ set t_Co=256
 " set dark background for solarized theme
 set background=dark
 " then enable colorscheme
-colorscheme solarized
+colorscheme onedark
+" If you don't want airline colors in tmuxline
+let g:airline#extensions#tmuxline#enabled = 0
 
 " setting default theme for airline
 let g:airlinetheme='hybrid'
