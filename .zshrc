@@ -13,6 +13,9 @@ unset JAVA_TOOL_OPTIONS
 # set default user
 DEFAULT_USER="ishan"
 
+# set promptline
+source .shell_prompt.sh
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -130,3 +133,6 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 alias xclip-copy="xclip -selection c"
 alias xclip-paste="xclip -selection clipboard -o"
 alias xclip-clear="xclip -selection c -i /dev/null"
+
+export NVM_DIR="/home/ishan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
