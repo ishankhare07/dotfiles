@@ -53,6 +53,8 @@ Plugin 'bling/vim-airline'
 Plugin 'edkolev/promptline.vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'Valloric/YouCompleteMe'
+" html emmet for vim
+Plugin 'mattn/emmet-vim'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -76,7 +78,7 @@ filetype plugin indent on    " required
 set t_Co=256
 
 " setting default theme for airline
-let g:airlinetheme='hybrid'
+let g:airlinetheme='jellybeans'
 
 " enable colorscheme
 colorscheme onedark
