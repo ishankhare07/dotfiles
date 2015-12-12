@@ -44,11 +44,13 @@ class Linker:
         if not os.path.exists(themes_dir):
             os.mkdir(themes_dir)
         try:
-            os.symlink(self.home + "/dotfiles/ishankhare07.zsh-theme", themes_dir + "/robbyrussell.zsh-theme")
-            print("Successfully linked theme file")
+            for themefile in filter(lambda x: x if x.endswith('.zsh-theme') else None, os.listdir()):
+                os.symlink(self.home + "/dotfiles/" + themefile, themes_dir + "/" + themefile)
+            print("Successfully linked theme files")
         except FileExistsError as fileExists:
             if self.force:
-                os.remove(themes_dir + "/robbyrussell.zsh-theme")   # remove existing symlink
+                for themefile in filter(lambda x: x if x.endswith('.zsh-theme') else None, os.listdir()):
+                    os.remove(themes_dir + "/" + themefile)         # remove existing symlink
                 self.link_theme()                                   # retry symlinking
                 return
             print("Theme already linked")
