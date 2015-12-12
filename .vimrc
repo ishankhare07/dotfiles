@@ -50,7 +50,6 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'freeo/vim-kalisi'
 Plugin 'mhumeSF/one-dark.vim'
 Plugin 'bling/vim-airline'
-Plugin 'edkolev/promptline.vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'Valloric/YouCompleteMe'
 " html emmet for vim
@@ -77,16 +76,16 @@ filetype plugin indent on    " required
 " first set 256 color support
 set t_Co=256
 
-" setting default theme for airline
-let g:airlinetheme='jellybeans'
-
 " enable colorscheme
-colorscheme onedark
+colorscheme solarized
 " set dark background
 set background=dark
 
 " If you don't want airline colors in tmuxline
 let g:airline#extensions#tmuxline#enabled = 0
+
+" setting default theme for airline
+let g:airline_theme='solarized'
 
 " detect ctrl arrow keys inside tmux
 if &term =~ '^screen'
