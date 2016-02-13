@@ -135,7 +135,7 @@ alias xclip-paste="xclip -selection clipboard -o"
 alias xclip-clear="xclip -selection c -i /dev/null"
 
 # alias for redshift
-alias redshift-gtk="redshift-gtk -l 23.25:77.416667"
+alias redshift-gtk="redshift-gtk -l 23.27:77.46"
 
 export NVM_DIR="/home/ishan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
