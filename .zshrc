@@ -59,7 +59,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # tmux help at https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#tmux
-plugins=(git ruby python autojump autopep8 command-not-found pip pyvenv sudo)
+plugins=(git python command-not-found pip pyvenv sudo)
 
 # User configuration
 
@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 alias glrh="git ls-remote --heads"
 alias gctb="git checkout --track -b"      # followed by <local_branch_name> <origin/remote_branch_name>
 alias gpsup="git push --set-upstream"      # useful for first time push of new branches
-alias gbvv="git branch -vv" 
+alias gbvv="git branch -vv"
 [[ -s "/home/ishan/.gvm/scripts/gvm" ]] && source "/home/ishan/.gvm/scripts/gvm"
 
 # alias for tumx unicode support
