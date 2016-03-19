@@ -42,18 +42,17 @@ Plugin 'gmarik/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-Plugin 'altercation/vim-colors-solarized'
+
+" Themes
 Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'lyxell/pride.vim'
-Plugin 'MPiccinato/wombat256'
-Plugin 'rust-lang/rust.vim'
-Plugin 'freeo/vim-kalisi'
 Plugin 'mhumeSF/one-dark.vim'
+Plugin 'scwood/vim-hybrid'
+
+" Non-themes
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'Valloric/YouCompleteMe'
-" html emmet for vim
-Plugin 'mattn/emmet-vim'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -76,10 +75,11 @@ filetype plugin indent on    " required
 " first set 256 color support
 set t_Co=256
 
-" enable colorscheme
-colorscheme onedark
 " set dark background
 set background=dark
+
+" set colorscheme
+colorscheme pride 
 
 " If you don't want airline colors in tmuxline
 let g:airline#extensions#tmuxline#enabled = 0
