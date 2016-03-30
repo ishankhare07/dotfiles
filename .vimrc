@@ -48,10 +48,10 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'lyxell/pride.vim'
 Plugin 'mhumeSF/one-dark.vim'
 Plugin 'scwood/vim-hybrid'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
 
 " Non-themes
-Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
 Plugin 'Valloric/YouCompleteMe'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -79,7 +79,7 @@ set t_Co=256
 set background=dark
 
 " set colorscheme
-colorscheme pride 
+colorscheme onedark
 
 " If you don't want airline colors in tmuxline
 let g:airline#extensions#tmuxline#enabled = 0
