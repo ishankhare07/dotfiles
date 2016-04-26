@@ -31,13 +31,13 @@ class Linker:
     def create_symlink(self, enitity):
         try:
             os.symlink(self.home + "/dotfiles/" + enitity, self.home + "/" + enitity)
-            print("created symlink", enitity)
+            print('\u002B', "created symlink", enitity)
         except FileExistsError as fileExists:
             if self.force:
                 os.remove(self.home + "/" + enitity)        # remove that file
                 self.create_symlink(enitity)                # retry symlinking for the entity
             else:
-                print("Symlink exists", enitity)                # symlink already exists
+                print('\U0001f5f8', "Symlink exists", enitity)                # symlink already exists
 
     def link_theme(self):
         themes_dir = self.home + "/.oh-my-zsh/custom/themes"
@@ -46,14 +46,14 @@ class Linker:
         try:
             for themefile in filter(lambda x: x if x.endswith('.zsh-theme') else None, os.listdir()):
                 os.symlink(self.home + "/dotfiles/" + themefile, themes_dir + "/" + themefile)
-            print("Successfully linked theme files")
+            print('\u002b', "Successfully linked theme files")
         except FileExistsError as fileExists:
             if self.force:
                 for themefile in filter(lambda x: x if x.endswith('.zsh-theme') else None, os.listdir()):
                     os.remove(themes_dir + "/" + themefile)         # remove existing symlink
                 self.link_theme()                                   # retry symlinking
                 return
-            print("Theme already linked")
+            print('\U0001f5f8', "Theme already linked")
 
 if __name__ == "__main__":
     l = Linker()
