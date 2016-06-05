@@ -138,5 +138,8 @@ alias xclip-copy="xclip -selection c"
 alias xclip-paste="xclip -selection clipboard -o"
 alias xclip-clear="xclip -selection c -i /dev/null"
 
+# alias for starting erlang docs
+alias erldocs="cd ~/docs-18.3/;python -m SimpleHTTPServer"
+
 export NVM_DIR="/home/ishan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
