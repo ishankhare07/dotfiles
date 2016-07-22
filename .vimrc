@@ -49,6 +49,7 @@ Plugin 'lyxell/pride.vim'
 Plugin 'mhumeSF/one-dark.vim'
 Plugin 'scwood/vim-hybrid'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 
 " Non-themes

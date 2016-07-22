@@ -96,7 +96,6 @@ source $ZSH/oh-my-zsh.sh
 #
 # enable suggestion for package if command not found
 # not required as command-not-found is now in plugins
-. /etc/zsh_command_not_found
 
 # git specific custom aliases
 alias glrh="git ls-remote --heads"
@@ -130,7 +129,7 @@ export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # GOPATH and default version
-gvm use go1.5 > /dev/null
+# gvm use go1.5 > /dev/null
 export GOPATH=/home/ishan/godev
 
 # aliases for xclip
