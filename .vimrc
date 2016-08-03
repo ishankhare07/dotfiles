@@ -7,6 +7,9 @@ syntax on
 " set line number on
 set number
 
+" enable backspace in vim on mac
+set backspace=indent,eol,start
+
 " set options for youcompleteme whitlist files
 let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1}
 
