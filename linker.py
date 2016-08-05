@@ -37,7 +37,7 @@ class Linker:
                 os.remove(self.home + "/" + enitity)        # remove that file
                 self.create_symlink(enitity)                # retry symlinking for the entity
             else:
-                print('\U0001f5f8', "Symlink exists", enitity)                # symlink already exists
+                print('\U00002713', "Symlink exists", enitity)                # symlink already exists
 
     def link_theme(self):
         themes_dir = self.home + "/.oh-my-zsh/custom/themes"

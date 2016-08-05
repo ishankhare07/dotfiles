@@ -7,6 +7,9 @@ syntax on
 " set line number on
 set number
 
+" enable backspace in vim on mac
+set backspace=indent,eol,start
+
 " set options for youcompleteme whitlist files
 let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1}
 
@@ -49,6 +52,7 @@ Plugin 'lyxell/pride.vim'
 Plugin 'mhumeSF/one-dark.vim'
 Plugin 'scwood/vim-hybrid'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 
 " Non-themes

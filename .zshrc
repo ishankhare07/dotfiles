@@ -63,7 +63,11 @@ plugins=(git python command-not-found pip pyvenv sudo)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ishan/.rvm/bin:/home/ishan/.rvm/bin:/home/ishan/.rvm/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/ishan/.rvm/bin"
+
+# put laravel into path
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -96,7 +100,6 @@ source $ZSH/oh-my-zsh.sh
 #
 # enable suggestion for package if command not found
 # not required as command-not-found is now in plugins
-. /etc/zsh_command_not_found
 
 # git specific custom aliases
 alias glrh="git ls-remote --heads"
@@ -130,7 +133,7 @@ export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # GOPATH and default version
-gvm use go1.5 > /dev/null
+# gvm use go1.5 > /dev/null
 export GOPATH=/home/ishan/godev
 
 # aliases for xclip
