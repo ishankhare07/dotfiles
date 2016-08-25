@@ -100,3 +100,4 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
+set encoding=utf-8
