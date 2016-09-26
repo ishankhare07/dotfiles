@@ -68,6 +68,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # put laravel into path
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+# put mysql on path on mac
+export PATH="$PATH:/usr/local/mysql/bin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -149,3 +152,9 @@ export NVM_DIR="/home/ishan/.nvm"
 
 export JIRA_URL="vegfru.atlassian.net"
 JIRA_RAPID_BOARD="true"
+
+# enable jump word on iterm2
+bindkey -e
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
