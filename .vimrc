@@ -28,6 +28,9 @@ nnoremap <c-w>> :vertical resize +10<cr>
 " set vim-airline to always appear
 set laststatus=2
 
+" vim airline - tabline
+let g:airline#extensions#tabline#enabled = 1
+
 " intergate vim-airline with powerline fonts
 let g:airline_powerline_fonts = 1
 
@@ -54,8 +57,12 @@ Plugin 'scwood/vim-hybrid'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 " Non-themes
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -83,13 +90,13 @@ set t_Co=256
 set background=dark
 
 " set colorscheme
-colorscheme onedark
+colorscheme solarized
 
 " If you don't want airline colors in tmuxline
 let g:airline#extensions#tmuxline#enabled = 0
 
 " setting default theme for airline
-let g:airline_theme='simple'
+let g:airline_theme='solarized'
 
 " detect ctrl arrow keys inside tmux
 if &term =~ '^screen'
@@ -101,3 +108,15 @@ if &term =~ '^screen'
 endif
 
 set encoding=utf-8
+
+" Tab navigation like Firefox.
+nnoremap <C-S-tab> :tabprevious<CR>
+map <M-tab>   :tabnext<CR>
+imap <M-tab>    <Esc>:tabnext<CR>
+map <C-q>       :tabclose<CR>
+nnoremap <C-Left>   :tabprevious<CR>
+nnoremap <C-t>     :tabnew<CR>
+imap <C-t>  :tabnew<CR>
+nnoremap <M-q>     :tabclose<CR>
+inoremap <C-t>     <Esc>:tabnew<CR>
+inoremap <M-q>     <Esc>:tabclose<CR>
