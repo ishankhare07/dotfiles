@@ -96,7 +96,7 @@ colorscheme solarized
 let g:airline#extensions#tmuxline#enabled = 0
 
 " setting default theme for airline
-let g:airline_theme='solarized'
+let g:airline_theme='base16_solarized'
 
 " detect ctrl arrow keys inside tmux
 if &term =~ '^screen'
