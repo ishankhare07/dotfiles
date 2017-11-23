@@ -1,5 +1,5 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible                " be iMproved, required
+filetype plugin indent on       " required
 
 " set syntax highlighting on
 syntax on
@@ -16,11 +16,29 @@ let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1}
 " auto-close ycm preview window after completion
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-" set tab width to 4
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
-set smarttab
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+"    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+
+au BufNewFile,BufRead *.go
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set noexpandtab |
+    \ set smarttab
+
+" go tab settings
+"autocmd Filetype *.go set tabstop=4 softtabstop=0 shiftwidth=4 noexpandtab
 
 " allow shortcut for split resizing
 nnoremap <c-w>> :vertical resize +10<cr>
@@ -33,9 +51,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " intergate vim-airline with powerline fonts
 let g:airline_powerline_fonts = 1
-
-" always use spaces instead of tabs
-set expandtab
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -59,11 +74,27 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'altercation/vim-colors-solarized'
 
+" typescript highlighting
+Plugin 'clausreinke/typescript-tools.vim'
+Plugin 'leafgarland/typescript-vim'
+
 " Non-themes
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'nvie/vim-flake8'
+
+" vim-go
+Plugin 'fatih/vim-go'
+
+" elrang specific
+Plugin 'vim-erlang/vim-erlang-runtime'
+Plugin 'vim-erlang/vim-erlang-compiler'
+Plugin 'vim-erlang/vim-erlang-omnicomplete'
+Plugin 'vim-erlang/vim-erlang-tags'
+
+Plugin 'elixir-lang/vim-elixir'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -110,13 +141,23 @@ endif
 set encoding=utf-8
 
 " Tab navigation like Firefox.
-nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <M-p> :tabprevious<CR>
+map <M-p> :tabprevious<CR>
+imap <M-p> <Esc>:tabprevious<CR>
 map <M-tab>   :tabnext<CR>
 imap <M-tab>    <Esc>:tabnext<CR>
 map <C-q>       :tabclose<CR>
-nnoremap <C-Left>   :tabprevious<CR>
-nnoremap <C-t>     :tabnew<CR>
-imap <C-t>  :tabnew<CR>
+nnoremap <C-n>     :tabnew<CR>
+imap <C-n>  <Esc>:tabnew<CR>
 nnoremap <M-q>     :tabclose<CR>
-inoremap <C-t>     <Esc>:tabnew<CR>
 inoremap <M-q>     <Esc>:tabclose<CR>
+
+" ycm autocomplete
+set omnifunc=syntaxcomplete#Complete
+set completefunc=youcompleteme#Complete
+
+" for typescript
+if !exists("g:ycm_semantic_triggers")
+      let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']

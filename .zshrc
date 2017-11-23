@@ -59,7 +59,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # tmux help at https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#tmux
-plugins=(git python pip pyvenv sudo git-flow brew jira web-search vagrant)
+plugins=(git python pip pyvenv sudo git-flow brew jira web-search vagrant docker encode64, go)
 
 # User configuration
 
@@ -68,8 +68,16 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # put laravel into path
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+# put google cloud sdk in path
+export PATH="$PATH:$HOME/google-cloud-sdk/path.zsh.inc"
+
 # put mysql on path on mac
 export PATH="$PATH:/usr/local/mysql/bin"
+
+# put rust on path
+export PATH="$PATH:$HOME/.cargo/bin"
+
+export PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -137,7 +145,7 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # GOPATH and default version
 # gvm use go1.5 > /dev/null
-export GOPATH=/home/ishan/godev
+export GOPATH=~/godev
 
 # aliases for xclip
 alias xclip-copy="xclip -selection c"
@@ -145,7 +153,7 @@ alias xclip-paste="xclip -selection clipboard -o"
 alias xclip-clear="xclip -selection c -i /dev/null"
 
 # alias for starting erlang docs
-alias erldocs="cd ~/docs-18.3/;python -m SimpleHTTPServer"
+alias erldocs="cd ~/docs-19.0/;python -m SimpleHTTPServer"
 
 export NVM_DIR="/home/ishan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -158,3 +166,9 @@ bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ishan/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ishan/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ishan/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ishan/google-cloud-sdk/completion.zsh.inc'; fi

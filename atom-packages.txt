@@ -5,3 +5,5 @@ autocomplete-angular-material@0.4.0
 autocomplete-php@0.3.7
 minimap
 
+linter
+atom-typescript
