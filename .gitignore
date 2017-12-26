@@ -1,4 +1,4 @@
 *.swp
 .vim/
-.tmux/resurrect/*
+.tmux/*
 .DS_Store
