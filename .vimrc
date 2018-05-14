@@ -142,14 +142,14 @@ endif
 set encoding=utf-8
 
 " Tab navigation like Firefox.
-nnoremap <M-p> :tabprevious<CR>
-map <M-p> :tabprevious<CR>
-imap <M-p> <Esc>:tabprevious<CR>
-map <M-tab>   :tabnext<CR>
-imap <M-tab>    <Esc>:tabnext<CR>
+nnoremap <C-p> :tabprevious<CR>
+map <C-p> :tabprevious<CR>
+imap <C-p> <Esc>:tabprevious<CR>
+map <C-n>   :tabnext<CR>
+imap <C-n>    <Esc>:tabnext<CR>
 map <C-q>       :tabclose<CR>
-nnoremap <C-n>     :tabnew<CR>
-imap <C-n>  <Esc>:tabnew<CR>
+nnoremap <C-t>     :tabnew<CR>
+imap <C-t>  <Esc>:tabnew<CR>
 nnoremap <M-q>     :tabclose<CR>
 inoremap <M-q>     <Esc>:tabclose<CR>
 
