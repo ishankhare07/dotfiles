@@ -11,7 +11,7 @@ set number
 set backspace=indent,eol,start
 
 " set options for youcompleteme whitlist files
-let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1}
+let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1, 'go': 1}
 
 " auto-close ycm preview window after completion
 let g:ycm_autoclose_preview_window_after_completion = 1
