@@ -11,7 +11,7 @@ ZSH_THEME="agnoster"
 unset JAVA_TOOL_OPTIONS
 
 # set default user
-DEFAULT_USER="ishan"
+DEFAULT_USER="ishankhare"
 
 # set promptline
 # source .shell_prompt.sh
@@ -59,7 +59,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # tmux help at https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#tmux
-plugins=(git python pip pyvenv sudo git-flow brew jira web-search vagrant docker encode64, go)
+plugins=(git python pip pyvenv sudo git-flow brew web-search docker encode64 go)
 
 # User configuration
 
