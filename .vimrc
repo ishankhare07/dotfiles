@@ -16,16 +16,17 @@ let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1}
 " auto-close ycm preview window after completion
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-au BufNewFile,BufRead *.py
+au BufNewFile,BufRead *.py,*.yml,*.yaml
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-"    \ set textwidth=79 |
+    \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
+    \ set formatprg=autopep8\ -| 
 
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
@@ -80,11 +81,16 @@ Plugin 'clausreinke/typescript-tools.vim'
 Plugin 'leafgarland/typescript-vim'
 
 " Non-themes
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nvie/vim-flake8'
+Plugin 'tell-k/vim-autopep8'
+
+Plugin 'w0rp/ale'
 
 " vim-go
 Plugin 'fatih/vim-go'
@@ -124,6 +130,9 @@ set background=dark
 " set colorscheme
 colorscheme solarized
 
+" automatically open NERDTree when vim starts
+" autocmd vimenter * NERDTree
+
 " If you don't want airline colors in tmuxline
 let g:airline#extensions#tmuxline#enabled = 0
 
@@ -142,16 +151,17 @@ endif
 set encoding=utf-8
 
 " Tab navigation like Firefox.
-nnoremap <C-p> :tabprevious<CR>
-map <C-p> :tabprevious<CR>
-imap <C-p> <Esc>:tabprevious<CR>
-map <C-n>   :tabnext<CR>
-imap <C-n>    <Esc>:tabnext<CR>
-map <C-q>       :tabclose<CR>
-nnoremap <C-t>     :tabnew<CR>
-imap <C-t>  <Esc>:tabnew<CR>
-nnoremap <M-q>     :tabclose<CR>
-inoremap <M-q>     <Esc>:tabclose<CR>
+nnoremap <C-p> :bprevious<CR>
+map <C-p> :bprevious<CR>
+imap <C-p> <Esc>:bprevious<CR>
+map <C-n>   :bnext<CR>
+imap <C-n>    <Esc>:bnext<CR>
+nnoremap <C-t>     :enew<CR>
+imap <C-t>  <Esc>:enew<CR>
+map <C-q>       :bdelete<CR>
+imap <C-q>       :bdelete<CR>
+nnoremap <C-q>     :bdelete<CR>
+inoremap <C-q>     <Esc>:bdelete<CR>
 
 " ycm autocomplete
 set omnifunc=syntaxcomplete#Complete
