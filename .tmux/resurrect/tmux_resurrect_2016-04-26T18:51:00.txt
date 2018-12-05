@@ -1,6 +1,0 @@
-pane	python-parallel-programming	0	:~	0	:-	0	:/home/ishan	1	htop	:htop
-pane	python-parallel-programming	1	:~/dotfiles	1	:*Z	0	:/home/ishan/dotfiles	1	vim	:vim linker.py
-pane	python-parallel-programming	1	:~/dotfiles	1	:*Z	1	:/home/ishan/dotfiles	0	zsh	:
-window	python-parallel-programming	0	0	:-	ccdd,214x48,0,0,0
-window	python-parallel-programming	1	1	:*Z	d170,214x48,0,0[214x24,0,0,2,214x23,0,25,3]
-state	python-parallel-programming	
