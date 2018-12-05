@@ -11,25 +11,27 @@ set number
 set backspace=indent,eol,start
 
 " set options for youcompleteme whitlist files
-let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1, 'go': 1}
+let g:ycm_filetype_whitelist = {'c': 1, 'cpp': 1, 'python': 1, 'go': 1, 'erlang': 1}
 
 " auto-close ycm preview window after completion
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-au BufNewFile,BufRead *.py,*.yml,*.yaml
+au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    " \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
-    \ set formatprg=autopep8\ -| 
+    \ set formatprg=autopep8\ -|
 
-au BufNewFile,BufRead *.js,*.html,*.css
+au BufNewFile,BufRead *.js,*.html,*.css,*.yml,*.yaml
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
+    \ set expandtab |
+    \ set autoindent |
 
 au BufNewFile,BufRead *.go
     \ set tabstop=4 |
@@ -67,8 +69,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Themes
 Plugin 'kristijanhusak/vim-hybrid-material'
-Plugin 'lyxell/pride.vim'
-Plugin 'mhumeSF/one-dark.vim'
 Plugin 'scwood/vim-hybrid'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-airline/vim-airline'
@@ -81,7 +81,7 @@ Plugin 'clausreinke/typescript-tools.vim'
 Plugin 'leafgarland/typescript-vim'
 
 " Non-themes
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'airblade/vim-gitgutter'
@@ -92,8 +92,11 @@ Plugin 'tell-k/vim-autopep8'
 
 Plugin 'w0rp/ale'
 
+Plugin 'vimwiki/vimwiki'
+
 " vim-go
 Plugin 'fatih/vim-go'
+Plugin 'mdempsky/gocode', {'rtp': 'vim/'}
 
 " elrang specific
 Plugin 'vim-erlang/vim-erlang-runtime'
@@ -167,8 +170,4 @@ inoremap <C-q>     <Esc>:bdelete<CR>
 set omnifunc=syntaxcomplete#Complete
 set completefunc=youcompleteme#Complete
 
-" for typescript
-if !exists("g:ycm_semantic_triggers")
-      let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
+
