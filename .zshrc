@@ -63,10 +63,7 @@ plugins=(git python pip pyvenv sudo git-flow brew web-search docker encode64 go)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/ishan/.rvm/bin"
-
-# put laravel into path
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$GOPATH/bin"
 
 # put google cloud sdk in path
 export PATH="$PATH:$HOME/google-cloud-sdk/path.zsh.inc"
@@ -165,7 +162,7 @@ bindkey '^[[1;9D' backward-word
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ishan/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ishan/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/ishankhare/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ishankhare/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/ishan/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ishan/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/ishankhare/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ishankhare/google-cloud-sdk/completion.zsh.inc'; fi
