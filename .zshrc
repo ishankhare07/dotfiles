@@ -11,7 +11,8 @@ ZSH_THEME="agnoster"
 unset JAVA_TOOL_OPTIONS
 
 # set default user
-DEFAULT_USER="ishankhare"
+# change username for office mac
+DEFAULT_USER="ishan.khare"
 
 # set promptline
 # source .shell_prompt.sh
@@ -59,11 +60,14 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # tmux help at https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#tmux
-plugins=(git python pip pyvenv sudo git-flow brew web-search docker encode64 go)
+plugins=(git python pip sudo git-flow brew web-search docker encode64 go vi-mode jira)
 
 # User configuration
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$GOPATH/bin"
+
+# put go on path
+export PATH="$PATH:/usr/local/go/bin"
 
 # put google cloud sdk in path
 export PATH="$PATH:$HOME/google-cloud-sdk/path.zsh.inc"
@@ -73,6 +77,9 @@ export PATH="$PATH:/usr/local/mysql/bin"
 
 # put rust on path
 export PATH="$PATH:$HOME/.cargo/bin"
+
+# put flutter on path
+export PATH="$PATH:$HOME/flutter/bin"
 
 export PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS
 
@@ -162,7 +169,13 @@ bindkey '^[[1;9D' backward-word
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ishankhare/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ishankhare/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/ishan.khare/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ishan.khare/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/ishankhare/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ishankhare/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/ishan.khare/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ishan.khare/google-cloud-sdk/completion.zsh.inc'; fi
+
+[[ -s "/Users/ishan.khare/.gvm/scripts/gvm" ]] && source "/Users/ishan.khare/.gvm/scripts/gvm"
+
+export LC_ALL=en_US.UTF-8
+
+source /Users/ishan.khare/Library/Preferences/org.dystroy.broot/launcher/bash/br

@@ -7,6 +7,9 @@ syntax on
 " set line number on
 set number
 
+" turn off line wraping
+set nowrap
+
 " enable backspace in vim on mac
 set backspace=indent,eol,start
 
@@ -38,6 +41,7 @@ au BufNewFile,BufRead *.go
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
     \ set noexpandtab |
+    \ set autoindent |
     \ set smarttab
 
 " go tab settings
@@ -45,6 +49,7 @@ au BufNewFile,BufRead *.go
 
 " allow shortcut for split resizing
 nnoremap <c-w>> :vertical resize +10<cr>
+nnoremap <c-w>< :vertical resize -10<cr>
 
 " set vim-airline to always appear
 set laststatus=2
@@ -91,12 +96,16 @@ Plugin 'nvie/vim-flake8'
 Plugin 'tell-k/vim-autopep8'
 
 Plugin 'w0rp/ale'
+Plugin 'luochen1990/rainbow'
 
 Plugin 'vimwiki/vimwiki'
+Plugin 'kien/ctrlp.vim'
 
 " vim-go
 Plugin 'fatih/vim-go'
-Plugin 'mdempsky/gocode', {'rtp': 'vim/'}
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'sebdah/vim-delve'
+" Plugin 'mdempsky/gocode', {'rtp': 'vim/'}
 
 " elrang specific
 Plugin 'vim-erlang/vim-erlang-runtime'
@@ -105,6 +114,26 @@ Plugin 'vim-erlang/vim-erlang-omnicomplete'
 Plugin 'vim-erlang/vim-erlang-tags'
 
 Plugin 'elixir-lang/vim-elixir'
+
+" nerdtree specific configuration
+Plugin 'scrooloose/nerdtree'
+
+" clojure specific
+Plugin 'tpope/vim-fireplace'
+Plugin 'venantius/vim-cljfmt'
+
+" graphviz
+Plugin 'liuchengxu/graphviz.vim'
+
+" rainbow parens
+Plugin 'junegunn/rainbow_parentheses.vim'
+
+Plugin 'davidhalter/jedi-vim'
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" toggle binding for nerdtree
+map <C-f> :NERDTreeToggle<CR>
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -133,9 +162,6 @@ set background=dark
 " set colorscheme
 colorscheme solarized
 
-" automatically open NERDTree when vim starts
-" autocmd vimenter * NERDTree
-
 " If you don't want airline colors in tmuxline
 let g:airline#extensions#tmuxline#enabled = 0
 
@@ -153,6 +179,15 @@ endif
 
 set encoding=utf-8
 
+" CtrlP binding
+let g:ctrlp_map = '<C-l>'
+
+
+" let g:go_fmt_fail_silently = 0
+let g:go_auto_sameids = 1
+let g:go_list_type = "locationlist"
+let g:ale_open_list = 1
+
 " Tab navigation like Firefox.
 nnoremap <C-p> :bprevious<CR>
 map <C-p> :bprevious<CR>
@@ -166,8 +201,9 @@ imap <C-q>       :bdelete<CR>
 nnoremap <C-q>     :bdelete<CR>
 inoremap <C-q>     <Esc>:bdelete<CR>
 
+" remap ; to : when in normal mode
+" nnoremap ; :
+
 " ycm autocomplete
-set omnifunc=syntaxcomplete#Complete
+set omnifunc=youcompleteme#Complete
 set completefunc=youcompleteme#Complete
-
-

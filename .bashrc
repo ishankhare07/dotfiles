@@ -120,3 +120,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #CMAKE_ROOT
 export CMAKE_ROOT=/usr/local/bin/cmake
+
+source /Users/ishan.khare/Library/Preferences/org.dystroy.broot/launcher/bash/br
