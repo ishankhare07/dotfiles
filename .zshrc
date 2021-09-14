@@ -12,7 +12,7 @@ unset JAVA_TOOL_OPTIONS
 
 # set default user
 # change username for office mac
-DEFAULT_USER="ishan.khare"
+DEFAULT_USER="ishankhare"
 
 # set promptline
 # source .shell_prompt.sh
@@ -39,6 +39,9 @@ export UPDATE_ZSH_DAYS=1
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
+# Set GOPATH
+export GOPATH=$HOME/godev
+
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
@@ -60,14 +63,17 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # tmux help at https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#tmux
-plugins=(git python pip sudo git-flow brew web-search docker encode64 go vi-mode jira)
+plugins=(git python pip sudo git-flow brew docker encode64 golang rbenv ruby gem kubectl fasd kube-ps1 git-flow)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$GOPATH/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:"
 
 # put go on path
 export PATH="$PATH:/usr/local/go/bin"
+
+# put GOPATH/bin on path
+export PATH="$PATH:$GOPATH/bin"
 
 # put google cloud sdk in path
 export PATH="$PATH:$HOME/google-cloud-sdk/path.zsh.inc"
@@ -121,7 +127,6 @@ alias glrh="git ls-remote --heads"
 alias gctb="git checkout --track -b"      # followed by <local_branch_name> <origin/remote_branch_name>
 alias gpsup="git push --set-upstream"      # useful for first time push of new branches
 alias gbvv="git branch -vv"
-[[ -s "/home/ishan/.gvm/scripts/gvm" ]] && source "/home/ishan/.gvm/scripts/gvm"
 
 # alias for tumx unicode support
 alias tmux="tmux -u2"
@@ -146,10 +151,6 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_so=$'\E[38;5;016m\E[48;5;220m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
-
-# GOPATH and default version
-# gvm use go1.5 > /dev/null
-export GOPATH=~/godev
 
 # aliases for xclip
 alias xclip-copy="xclip -selection c"

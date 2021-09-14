@@ -29,7 +29,7 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix |
     \ set formatprg=autopep8\ -|
 
-au BufNewFile,BufRead *.js,*.html,*.css,*.yml,*.yaml
+au BufNewFile,BufRead *.js,*.html,*.css,*.yml,*.yaml,*.tf,*.tfvar
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
@@ -118,9 +118,9 @@ Plugin 'elixir-lang/vim-elixir'
 " nerdtree specific configuration
 Plugin 'scrooloose/nerdtree'
 
-" clojure specific
-Plugin 'tpope/vim-fireplace'
-Plugin 'venantius/vim-cljfmt'
+" Configuration for terraform
+" Plugin 'hashivim/vim-terraform'
+" Plugin 'fatih/vim-hclfmt'
 
 " graphviz
 Plugin 'liuchengxu/graphviz.vim'
@@ -182,11 +182,29 @@ set encoding=utf-8
 " CtrlP binding
 let g:ctrlp_map = '<C-l>'
 
-
-" let g:go_fmt_fail_silently = 0
+let g:go_metalinter_enabled = ['vet', 'golint']
+let g:go_fmt_command = "goimports"
+let g:go_autodetect_gopath = 1
+" let g:go_metalinter_autosave = 1
 let g:go_auto_sameids = 1
+
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_generate_tags = 1
+
 let g:go_list_type = "locationlist"
 let g:ale_open_list = 1
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+let g:go_rename_command='gopls'
+
+let g:ctrlp_show_hidden = 1
+
+let g:terraform_align=1
 
 " Tab navigation like Firefox.
 nnoremap <C-p> :bprevious<CR>
