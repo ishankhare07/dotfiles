@@ -136,7 +136,6 @@ if [ "$TMUX" = "" ]; then
     export TERM=screen-256color
     echo "starting tmux"
     tmux
-    exit
 
 fi
 
@@ -180,3 +179,5 @@ if [ -f '/Users/ishan.khare/google-cloud-sdk/completion.zsh.inc' ]; then . '/Use
 export LC_ALL=en_US.UTF-8
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+ulimit -S -n 65536
